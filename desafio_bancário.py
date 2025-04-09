@@ -1,3 +1,5 @@
+# Definindo visualização do menu
+
 menu = """
 
 ==================== Menu ====================
@@ -10,12 +12,15 @@ Selecione uma opção:
 
 """
 
+# Atribuindo variáveis principais
 
 saldo = 0
 limite = 500
 extrato = ""
 numero_saques = 0
 LIMITE_SAQUES = 3
+
+# Definindo funções com comportamento de cada operação do manu
 
 def depositar(saldo, valor, extrato):
     if valor > 0:
@@ -45,8 +50,10 @@ def exibir_extrato(saldo, extrato):
     print(extrato if extrato else "Não foram realizadas movimentações.")
     print(f"Saldo: R$ {saldo:.2f}")
     print("=================================================")
+
+# Definindo função para chamar o menu
     
-def main():
+def main_menu():
     global saldo, numero_saques, extrato
     while True:
 
@@ -72,6 +79,7 @@ def main():
         else:
             print("Opção inválida. Tente novamente.")
 
+# Executar o menu
 
-main() 
+main_menu() 
 
